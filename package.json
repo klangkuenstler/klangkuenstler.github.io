@@ -1,0 +1,22 @@
+{
+  "name": "iltw-website",
+  "version": "1.0.0",
+  "description": "Trabalho prático da cadeira de **Introdução Às Linguagens e Tecnologias Web**, do 1º ano do curso de Programação de Sistemas de Informação.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klangkuenstler/iltw-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/klangkuenstler/iltw-website/issues"
+  },
+  "homepage": "https://github.com/klangkuenstler/iltw-website#readme"
+}
