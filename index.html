@@ -1,77 +1,333 @@
-<!DOCTYPE html>
-<html lang="pt-PT">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Restaurantes</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-    <nav class="navbar">
-        <div class="logo" href="/">🍽️ GuiaRest</div>
-        <ul class="nav-links">
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#restaurantes">Restaurantes</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <header class="hero" id="inicio">
-        <div class="hero-content">
-            <h1>Descubra os melhores restaurantes</h1>
-            <p>Explore a nossa seleção de restaurantes favoritos</p>
-            <a href="#restaurantes" class="btn-hero">Ver Restaurantes</a>
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080e13" />
+    <meta
+      name="description"
+      content="Marcos Ribeiro — Information Systems Programming student in Portugal. Explore my projects, experience, and journey. Available for a 540-hour internship from February 2027."
+    />
+    <meta
+      property="og:title"
+      content="Marcos Ribeiro — A journey in the making"
+    />
+    <meta
+      property="og:description"
+      content="Code, curiosity & a little adrenaline. Explore my interactive CV and projects."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://klangkuenstler.github.io/" />
+    <meta
+      property="og:image"
+      content="https://klangkuenstler.github.io/assets/marcos.jpg"
+    />
+    <title>Marcos Ribeiro — Portfolio & CV</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/portfolio.css" />
+    <script type="module" src="js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="#home" aria-label="Marcos Ribeiro, home"
+        >mr<span>.</span><small>/ PORTFOLIO</small></a
+      >
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#journey" data-i18n="journey">Journey</a>
+        <a href="#projects" data-i18n="projects">Projects</a>
+        <a href="#toolkit" data-i18n="toolkit">Toolkit</a>
+        <a href="#contact" data-i18n="contact">Contact</a>
+      </nav>
+      <div class="preferences">
+        <div class="language-control" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button
+          ><span>/</span
+          ><button type="button" data-lang="pt" aria-pressed="false">PT</button>
         </div>
+        <button
+          type="button"
+          class="icon-button"
+          id="theme-toggle"
+          aria-label="Switch to light mode"
+        ></button>
+      </div>
     </header>
-
-    <main>
-        <section class="filtros-section" id="restaurantes">
-            <h2>Os Nossos Restaurantes</h2>
-            <div class="filtros">
-                <select id="filtroTipo" class="filtro-select">
-                    <option value="todos">Todas as categorias</option>
-                    <option value="Tradicional portuguesa">Tradicional Portuguesa</option>
-                    <option value="Regional">Regional</option>
-                    <option value="Marisqueira">Marisqueira</option>
-                    <option value="Peixe">Peixe</option>
-                    <option value="Variada">Variada</option>
-                    <option value="Italiana">Italiana</option>
-                    <option value="Grelhados">Grelhados</option>
-                    <option value="Caseira">Caseira</option>
-                    <option value="Gourmet">Gourmet</option>
-                    <option value="Moderna">Moderna</option>
-                </select>
-                <select id="filtroConcelho" class="filtro-select">
-                    <option value="todos">Todas as regiões</option>
-                </select>
-                <select id="filtroPreco" class="filtro-select">
-                    <option value="todos">Qualquer preço</option>
-                    <option value="economico">€ (Económico)</option>
-                    <option value="medio">€€ (Médio)</option>
-                    <option value="caro">€€€ (Caro)</option>
-                </select>
-            </div>
-        </section>
-
-        <section class="restaurantes-grid" id="listaRestaurantes">
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p>&copy; 2026 GuiaRest - Catálogo de Restaurantes</p>
-    </footer>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <div id="modal-body"></div>
+    <main id="main">
+      <section class="hero section-shell" id="home">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="status-dot"></span
+            ><span data-i18n="heroEyebrow"
+              >CURIOUS MIND. HANDS-ON BUILDER.</span
+            >
+          </div>
+          <h1>Marcos<br />Ribeiro<span class="accent">.</span></h1>
+          <p class="hero-role" data-i18n="role">
+            Information Systems Programming student
+          </p>
+          <p class="hero-description" data-i18n="heroDescription">
+            From circuits to code. From the starting grid to the next big idea.
+            I build things, chase challenges, and keep learning.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#journey"
+              ><span data-i18n="explore">Explore my journey</span
+              ><span aria-hidden="true">↘</span></a
+            >
+            <a
+              class="button secondary cv-download"
+              href="assets/marcos-ribeiro-cv-en.pdf"
+              download
+              ><span data-i18n="download">Download CV</span
+              ><span aria-hidden="true">↓</span></a
+            >
+          </div>
+          <div class="hero-meta">
+            <span data-icon="pin"></span><span>Viseu & Aveiro, Portugal</span
+            ><span class="meta-divider"></span
+            ><a
+              href="https://github.com/klangkuenstler"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub ↗</a
+            ><a
+              href="https://www.linkedin.com/in/marcos-ribeiro-2746052aa/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn ↗</a
+            >
+          </div>
         </div>
-    </div>
-
-    <script src="js/main.js"></script>
-</body>
-
+        <div class="portrait-composition">
+          <div class="portrait-coordinate">
+            40°38′ N &nbsp; 8°39′ W <span>PT</span>
+          </div>
+          <div class="portrait-frame">
+            <img
+              src="assets/marcos.jpg"
+              alt="Marcos Ribeiro"
+              width="1200"
+              height="1600"
+              fetchpriority="high"
+            /><span class="portrait-cross cross-top">+</span
+            ><span class="portrait-cross cross-bottom">+</span
+            ><span class="portrait-index">FIG. 01 / MARCOS</span>
+          </div>
+          <div class="portrait-note">
+            <span data-icon="code"></span>
+            <div>
+              <strong data-i18n="building">Always building.</strong
+              ><span data-i18n="learning">Always learning.</span>
+            </div>
+            <span class="note-star" aria-hidden="true">✳︎</span>
+          </div>
+          <div class="portrait-caption">
+            <span class="status-dot"></span
+            ><span data-i18n="based"
+              >BASED IN PORTUGAL · OPEN TO POSSIBILITIES</span
+            >
+          </div>
+        </div>
+        <a href="#journey" class="scroll-cue"
+          ><span class="scroll-line"></span
+          ><span data-i18n="scroll">SCROLL TO DISCOVER</span><span>↓</span></a
+        >
+      </section>
+      <aside class="availability section-shell">
+        <span class="availability-icon" data-icon="spark"></span>
+        <div>
+          <span class="eyebrow" data-i18n="nextChapter">THE NEXT CHAPTER</span>
+          <h2 data-i18n="available">Looking for a place to make an impact.</h2>
+          <p data-i18n="availabilityDetails">
+            540-hour internship · February 2027 · AI, web development, databases
+            & software development
+          </p>
+        </div>
+        <a href="#contact" class="text-link"
+          ><span data-i18n="letsTalk">Let’s talk</span> ↗</a
+        >
+      </aside>
+      <section class="journey-section section-shell" id="journey">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">
+              <span class="section-number">01 /</span
+              ><span data-i18n="theTimeline">THE TIMELINE</span>
+            </div>
+            <h2 data-i18n="journeyTitle">
+              A journey in the making<span class="accent">.</span>
+            </h2>
+          </div>
+          <p data-i18n="journeyDescription">
+            The work, the learning, and the moments in between. Follow the line.
+            There’s a story at every stop.
+          </p>
+        </div>
+        <div class="timeline-toolbar">
+          <div
+            id="filters"
+            class="filters"
+            role="group"
+            aria-label="Filter timeline"
+          ></div>
+          <span class="timeline-order" data-i18n="newest">NEWEST FIRST ↓</span>
+        </div>
+        <p class="sr-only" id="filter-status" aria-live="polite"></p>
+        <div class="timeline-layout">
+          <nav
+            class="year-navigation"
+            id="year-nav"
+            aria-label="Jump to year"
+          ></nav>
+          <div class="timeline" id="timeline">
+            <div class="timeline-track" aria-hidden="true">
+              <div class="timeline-progress"></div>
+            </div>
+            <div id="timeline-entries"></div>
+          </div>
+        </div>
+        <div class="timeline-end">
+          <span class="status-dot"></span
+          ><span data-i18n="storyContinues">AND THE STORY CONTINUES.</span>
+        </div>
+      </section>
+      <section class="projects-section section-shell" id="projects">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">
+              <span class="section-number">02 /</span
+              ><span data-i18n="selectedWork">SELECTED WORK</span>
+            </div>
+            <h2 data-i18n="projectsTitle">
+              Ideas made real<span class="accent">.</span>
+            </h2>
+          </div>
+          <p data-i18n="projectsDescription">
+            Real businesses. Real hardware. Projects that took me from “what if”
+            to “it works”.
+          </p>
+        </div>
+        <div class="project-grid" id="project-grid"></div>
+      </section>
+      <section class="toolkit-section section-shell" id="toolkit">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">
+              <span class="section-number">03 /</span
+              ><span data-i18n="underTheHood">UNDER THE HOOD</span>
+            </div>
+            <h2 data-i18n="toolkitTitle">
+              My everyday toolkit<span class="accent">.</span>
+            </h2>
+          </div>
+          <p data-i18n="toolkitDescription">
+            A growing collection of tools, with curiosity as the common thread.
+          </p>
+        </div>
+        <div class="toolkit-grid" id="toolkit-grid"></div>
+        <div class="beyond-code">
+          <div>
+            <div class="eyebrow" data-i18n="beyond">BEYOND THE CODE</div>
+            <h3 data-i18n="beyondTitle">
+              A little adrenaline.<br />A lot of curiosity.
+            </h3>
+          </div>
+          <div>
+            <p data-i18n="beyondText">
+              Off-screen, you’ll find me on a downhill trail or at the karting
+              track. Music and games fill the quieter moments. Different worlds,
+              the same drive to get better.
+            </p>
+            <div class="interest-tags">
+              <span>↘ Downhill</span><span>⚑ Karting</span
+              ><span data-i18n="music">♫ Music</span
+              ><span data-i18n="games">⌘ Games</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contact-section section-shell" id="contact">
+        <div class="eyebrow">
+          <span class="section-number">04 /</span
+          ><span data-i18n="whatsNext">WHAT’S NEXT?</span>
+        </div>
+        <div class="contact-layout">
+          <div>
+            <h2 data-i18n="contactTitle">
+              Let’s build<br />something <em>good.</em>
+            </h2>
+            <p data-i18n="contactText">
+              Have an internship opportunity or a website in mind? I’d love to
+              hear about it.
+            </p>
+            <a class="email-link" href="mailto:marcospribeiro57@gmail.com"
+              >marcospribeiro57@gmail.com <span>↗</span></a
+            >
+          </div>
+          <div class="contact-details">
+            <div>
+              <span class="eyebrow" data-i18n="availabilityLabel"
+                >AVAILABILITY</span
+              >
+              <p data-i18n="contactAvailability">
+                Internship from February 2027 · 540 hours<br />Freelance web
+                development
+              </p>
+            </div>
+            <div>
+              <span class="eyebrow" data-i18n="locationLabel"
+                >LOCATION & FORMAT</span
+              >
+              <p data-i18n="contactLocation">
+                Viseu & Aveiro districts, Portugal<br />On-site, hybrid or
+                remote
+              </p>
+            </div>
+            <div class="social-links">
+              <a
+                href="https://github.com/klangkuenstler"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub ↗</a
+              ><a
+                href="https://www.linkedin.com/in/marcos-ribeiro-2746052aa/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn ↗</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer section-shell">
+      <a class="wordmark" href="#home">mr<span>.</span></a
+      ><span>© <span id="copyright-year"></span> Marcos Ribeiro</span
+      ><a href="#home" data-i18n="backTop">Back to top ↑</a>
+    </footer>
+    <dialog id="gallery" aria-labelledby="gallery-title">
+      <div class="gallery-top">
+        <h2 id="gallery-title"></h2>
+        <button
+          type="button"
+          class="icon-button"
+          id="close-gallery"
+          aria-label="Close image"
+        >
+          ×
+        </button>
+      </div>
+      <img id="gallery-image" alt="" />
+      <p id="gallery-caption"></p>
+    </dialog>
+    <article class="print-cv" id="print-cv"></article>
+    <noscript
+      ><div class="noscript-note">
+        Please enable JavaScript for the bilingual timeline. You can also
+        <a href="assets/marcos-ribeiro-cv-en.pdf">download my CV</a> or
+        <a href="mailto:marcospribeiro57@gmail.com">email me</a>.
+      </div></noscript
+    >
+  </body>
 </html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Restaurantes</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo" href="/">🍽️ GuiaRest</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#restaurantes">Restaurantes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Descubra os melhores restaurantes</h1>
+            <p>Explore a nossa seleção de restaurantes favoritos</p>
+            <a href="#restaurantes" class="btn-hero">Ver Restaurantes</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="filtros-section" id="restaurantes">
+            <h2>Os Nossos Restaurantes</h2>
+            <div class="filtros">
+                <select id="filtroTipo" class="filtro-select">
+                    <option value="todos">Todas as categorias</option>
+                    <option value="Tradicional portuguesa">Tradicional Portuguesa</option>
+                    <option value="Regional">Regional</option>
+                    <option value="Marisqueira">Marisqueira</option>
+                    <option value="Peixe">Peixe</option>
+                    <option value="Variada">Variada</option>
+                    <option value="Italiana">Italiana</option>
+                    <option value="Grelhados">Grelhados</option>
+                    <option value="Caseira">Caseira</option>
+                    <option value="Gourmet">Gourmet</option>
+                    <option value="Moderna">Moderna</option>
+                </select>
+                <select id="filtroConcelho" class="filtro-select">
+                    <option value="todos">Todas as regiões</option>
+                </select>
+                <select id="filtroPreco" class="filtro-select">
+                    <option value="todos">Qualquer preço</option>
+                    <option value="economico">€ (Económico)</option>
+                    <option value="medio">€€ (Médio)</option>
+                    <option value="caro">€€€ (Caro)</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="restaurantes-grid" id="listaRestaurantes">
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 GuiaRest - Catálogo de Restaurantes</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
